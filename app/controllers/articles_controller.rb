@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+
+  http_basic_authenticate_with name: "hxx", password: "123456", expect: [:index, :show]
+
   def new
     @article = Article.new
   end
